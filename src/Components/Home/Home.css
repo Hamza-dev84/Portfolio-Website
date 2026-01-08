@@ -1,0 +1,173 @@
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: 30px;
+  text-align: center;
+}
+
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.animated-rounded-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #007bff;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.greeting {
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 3.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(142, 42, 155, 1) 0%,
+    rgba(199, 106, 87, 1) 54%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.role {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-top: 5px;
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.contactBtn {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: black;
+  background: linear-gradient(
+    90deg,
+    rgba(142, 42, 155, 1) 0%,
+    rgba(199, 106, 87, 1) 54%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contactBtn:hover {
+  transform: scale(1.1);
+}
+
+.cvBtn {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  background: rgba(255, 253, 253, 0.164);
+  transition: 0.2s;
+}
+
+.cvBtn:hover {
+  border: 1px solid white;
+}
+
+
+@media (max-width: 992px) {
+  .animated-rounded-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .greeting {
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .animated-rounded-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    font-size: 2.4rem;
+  }
+
+  .role {
+    font-size: 1.3rem;
+  }
+
+  .greeting {
+    font-size: 1.4rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contactBtn,
+  .cvBtn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .animated-rounded-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+
+  .home {
+    margin: 15px;
+    gap: 30px;
+  }
+}

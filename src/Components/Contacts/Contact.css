@@ -1,0 +1,124 @@
+.contact {
+  padding: 70px 20px;
+  background: #0f0f0f; 
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Left Info */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fbbf24;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.contact-info ul li:hover {
+  transform: translateX(8px);
+  color: #fbbf24;
+}
+
+.contact-info .icon {
+  color: #fbbf24;
+  font-size: 1.3rem;
+}
+
+/* Right Form */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #fbbf24;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: linear-gradient(90deg, #6d28d9, #f59e0b);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #f59e0b, #6d28d9);
+  box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+}
+
+
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info ul li {
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
