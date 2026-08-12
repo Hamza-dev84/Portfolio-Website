@@ -1,8 +1,10 @@
 import { Poppins, JetBrains_Mono } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import ThemeProvider from "@/components/providers/ThemeProvider";
+import Footer from "@/components/layout/Footer";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollerProvider";
 
-// Main UI font - clean, modern, professional
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -10,7 +12,6 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// Monospace font - great for a "developer" aesthetic (code snippets, tags, etc.)
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -21,31 +22,23 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "Muhammad Hamza | Full-Stack Developer",
   description:
-    "Full-Stack Developer specializing in React, Next.js, Node.js, Express.js, MongoDB and MySQL. Explore my projects, skills, and experience.",
-  keywords: [
-    "Full-Stack Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "Portfolio",
-  ],
-  authors: [{ name: "Muhammad Hamza" }],
-  openGraph: {
-    title: "Muhammad Hamza | Full-Stack Developer",
-    description:
-      "Full-Stack Developer specializing in React, Next.js, Node.js, Express.js, MongoDB and MySQL.",
-    type: "website",
-  },
+    "Full-Stack Developer specializing in React, Next.js, and Node.js. Explore my projects, skills, and experience.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider>
+          {/* <PageLoader /> */}
+          <SmoothScrollProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScrollProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

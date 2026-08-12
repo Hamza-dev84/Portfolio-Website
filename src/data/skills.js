@@ -24,7 +24,7 @@ export const skillsData = [
       { name: "CSS", icon: SiCss },
       { name: "JavaScript", icon: SiJavascript },
       {name: "TypeScript", icon: SiTypescript},
-      { name: "React", icon: SiReact },
+      { name: "React.js", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
     ],
   },
